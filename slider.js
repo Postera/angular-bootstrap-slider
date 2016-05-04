@@ -1,13 +1,3 @@
-(function(factory) {
-    if (typeof define === 'function' && define.amd) {
-        define(['angular', 'bootstrapSlider'], factory);
-    } else if (typeof module === 'object' && module.exports) {
-        module.exports = factory(require('angular'), require('bootstrapSlider'));
-    } else if (window) {
-        factory(window.angular, window.Slider);
-    }
-})(function (angular, Slider) {
-
 angular.module('ui.bootstrap-slider', [])
     .directive('slider', ['$parse', '$timeout', '$rootScope', function ($parse, $timeout, $rootScope) {
         return {
@@ -229,4 +219,3 @@ angular.module('ui.bootstrap-slider', [])
         };
     }])
 ;
-});
